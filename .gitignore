@@ -1,0 +1,17 @@
+# .gitignore은 git에 올리고 싶지 않은 파일을 적고 
+# 파일은 확장자까지 적어준다 .
+# 폴더는 폴더명 뒤에 /를 붙여서 적는다.
+# 예시 
+node_modules/
+playwright-report/
+tests/
+test-results/
+
+# 기능이나 목적별로 엔터로 구분해서 적어둡니다. 
+# 아직 완성되지 않은 파일, 아이디나 비밀번호 등등 .. 
+
+# *은 모든이라는 뜻
+*.json 
+
+# !는 not을 의미합니다 . 
+!package.json
