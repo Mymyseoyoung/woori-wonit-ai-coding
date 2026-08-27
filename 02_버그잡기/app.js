@@ -107,8 +107,10 @@ async function fetchExchangeRate() {
   return new Promise((resolve) => setTimeout(() => resolve(1384), 500));
 }
 
-const rate = fetchExchangeRate();
-document.querySelector("#exchangeRate").textContent = rate + "원";
+async function displayExchangeRate() {
+  const rate = await fetchExchangeRate();
+  document.querySelector("#exchangeRate").textContent = rate + "원";
+}
 
 // ---------- 이체 확인 모달 ----------
 
@@ -140,3 +142,4 @@ const depositBtn = document.querySelector("#depositBtn");
 depositBtn.addEventListener("click", handleDeposit);
 
 renderBalance();
+displayExchangeRate();
