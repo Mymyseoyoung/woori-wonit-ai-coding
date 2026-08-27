@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>은행 계좌 카드</title>
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			min-height: 100svh;
+			padding: 20px;
+			display: grid;
+			place-items: center;
+			background: #f1f5f9;
+			font-family: Arial, sans-serif;
+			color: #172033;
+		}
+		.account-card {
+			width: min(100%, 390px);
+			padding: 28px;
+			border-radius: 20px;
+			background: #fff;
+			box-shadow: 0 10px 24px rgba(15, 23, 42, .1);
+		}
+		.card-header, .card-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.bank-name { margin: 0; font-size: 1.1rem; }
+		.label { margin: 28px 0 8px; color: #64748b; font-size: .9rem; }
+		.account-number { margin: 0; font-size: 1.2rem; letter-spacing: 1px; }
+		.balance { margin: 8px 0 0; font-size: 2rem; font-weight: 700; }
+		.status {
+			padding: 6px 10px;
+			border-radius: 999px;
+			background: #dcfce7;
+			color: #15803d;
+			font-size: .8rem;
+			font-weight: 700;
+		}
+		.card-footer { margin-top: 28px; color: #64748b; font-size: .85rem; }
+		@media (max-width: 420px) {
+			body { padding: 16px; }
+			.account-card { padding: 22px; border-radius: 16px; }
+			.balance { font-size: 1.75rem; }
+		}
+	</style>
+</head>
+<body>
+	<main class="account-card" aria-label="은행 계좌 정보">
+		<header class="card-header">
+			<h1 class="bank-name">우리은행</h1>
+			<span class="status">정상</span>
+		</header>
+		<p class="label">계좌번호</p>
+		<p class="account-number">1002-***-123456</p>
+		<p class="label">잔액</p>
+		<p class="balance">₩ 1,250,000</p>
+		<footer class="card-footer">
+			<span>최근 업데이트</span>
+			<time datetime="2025-01-01">오늘</time>
+		</footer>
+	</main>
+</body>
+</html>
