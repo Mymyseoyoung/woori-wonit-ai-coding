@@ -143,3 +143,5 @@ depositBtn.addEventListener("click", handleDeposit);
 
 renderBalance();
 displayExchangeRate();
+
+
