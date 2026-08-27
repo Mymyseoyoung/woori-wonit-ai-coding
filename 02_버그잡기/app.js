@@ -75,7 +75,7 @@ function renderTransactionList() {
 }
 
 function renderBalance() {
-  const balanceEl = document.getElementById("blance");
+  const balanceEl = document.getElementById("balance");
   balanceEl.textContent = formatCurrency(ACCOUNTS[0].balance);
 }
 
@@ -95,7 +95,7 @@ function calcInterest(balance, rate) {
 const interestBtn = document.querySelector("#interestBtn");
 interestBtn.addEventListener("click", () => {
   const rate = 0.0175; // 우대금리 연 1.75%
-  const interest = calcInterest(ACCOUNTS[0].balance, rate);
+  const interest = Math.round(calcInterest(ACCOUNTS[0].balance, rate));
   const newBalance = ACCOUNTS[0].balance + interest;
   document.querySelector("#interestResult").textContent =
     "이자 " + interest + "원 적용 → 잔액 " + newBalance + "원";
@@ -137,6 +137,6 @@ renderCategorySummary();
 renderTransactionList();
 
 const depositBtn = document.querySelector("#depositBtn");
-depositBtn.addEventListener("click", handleDeposit());
+depositBtn.addEventListener("click", handleDeposit);
 
 renderBalance();
