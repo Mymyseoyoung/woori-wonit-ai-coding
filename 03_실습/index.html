@@ -28,19 +28,32 @@
 			align-items: center;
 			justify-content: space-between;
 		}
-		.bank-name { margin: 0; font-size: 1.1rem; }
+		.bank-name {
+			margin: 0;
+			font-size: 1.1rem;
+			font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+			font-weight: 700;
+			color: #0066b3;
+		}
 		.label { margin: 28px 0 8px; color: #64748b; font-size: .9rem; }
 		.account-number { margin: 0; font-size: 1.2rem; letter-spacing: 1px; }
 		.balance { margin: 8px 0 0; font-size: 2rem; font-weight: 700; }
 		.status {
 			padding: 6px 10px;
 			border-radius: 999px;
-			background: #dcfce7;
-			color: #15803d;
+			background: #e5e7eb;
+			color: #6b7280;
 			font-size: .8rem;
 			font-weight: 700;
 		}
 		.card-footer { margin-top: 28px; color: #64748b; font-size: .85rem; }
+		.normal-status {
+			padding: 6px 10px;
+			border-radius: 999px;
+			background: linear-gradient(135deg, #dcfce7, #86efac);
+			color: #15803d;
+			font-weight: 700;
+		}
 		@media (max-width: 420px) {
 			body { padding: 16px; }
 			.account-card { padding: 22px; border-radius: 16px; }
@@ -52,15 +65,15 @@
 	<main class="account-card" aria-label="은행 계좌 정보">
 		<header class="card-header">
 			<h1 class="bank-name">우리은행</h1>
-			<span class="status">정상</span>
+			<span class="status">WON</span>
 		</header>
 		<p class="label">계좌번호</p>
 		<p class="account-number">1002-***-123456</p>
 		<p class="label">잔액</p>
 		<p class="balance">₩ 1,250,000</p>
 		<footer class="card-footer">
-			<span>최근 업데이트</span>
 			<time datetime="2025-01-01">오늘</time>
+			<span class="normal-status">정상</span>
 		</footer>
 	</main>
 </body>
